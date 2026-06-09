@@ -767,6 +767,12 @@ export default function InteractiveAnatomy({ onSelectRegion }) {
           <path d="M30.63,38.66c-.21-.21-.29-.51-.41-.8l-.29-1.46.93,1.21c-.03.36-.08.67-.24,1.05Z" fill="#454545"/>
         </g>
       </svg>
+      
+            {selectedRegion && (
+        <div className="selected-anatomy-region">
+          Selected: {selectedRegion.replaceAll("_", " ")}
+        </div>
+      )}
     </div>
   );
 }
