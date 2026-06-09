@@ -275,7 +275,17 @@ export default function Page() {
       </nav>
 
       <div className="tab-space">
-        {activeTab === 'dashboard' && <Dashboard profile={profile} stats={dashboardStats} setActiveTab={setActiveTab} saving={saving} saveMessage={saveMessage} />}
+        {activeTab === 'dashboard' && (
+        <Dashboard
+          profile={profile}
+          stats={dashboardStats}
+          setActiveTab={setActiveTab}
+          saving={saving}
+          saveMessage={saveMessage}
+          assessment={assessment}
+          setAssessment={setAssessment}
+        />
+      )}
         {activeTab === 'assessment' && <Assessment assessment={assessment} setAssessment={setAssessment} toggleArray={toggleArray} generateProfile={generateProfile} />}
         {activeTab === 'plan' && <PlanView profile={profile} completeDay={completeDay} setActiveTab={setActiveTab} />}
         {activeTab === 'checkin' && <Checkin addCheckin={addCheckin} checkins={checkins} />}
@@ -307,7 +317,7 @@ function AuthCard({ authMode, setAuthMode, authForm, setAuthForm, handleAuth, au
   );
 }
 
-function Dashboard({ profile, stats, setActiveTab, saving, saveMessage }) {
+function Dashboard({ profile, stats, setActiveTab, saving, saveMessage, assessment, setAssessment }) {
   if (!profile) {
     return (
       <section className="empty-state app-section app-section-light">
