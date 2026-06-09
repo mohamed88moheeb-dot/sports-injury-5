@@ -1305,7 +1305,8 @@ input[type='range']::-moz-range-thumb {
 }
 
 .human-front-medium {
-  height: 250px; /* hero section / larger card */
+  height: 150px;
+  width: auto;
 }
 
 .human-front-large {
