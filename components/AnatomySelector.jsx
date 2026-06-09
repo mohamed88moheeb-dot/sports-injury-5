@@ -550,7 +550,7 @@ export default function AnatomySelector({ assessment, setAssessment }) {
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
         <div>
           <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#00C896', marginBottom: 3 }}>
-            {zoomed ? 'Step 2 — Select exact muscle' : 'Step 1 — Select muscle group'}
+            {zoomed ? 'Step 2 — Choose exact injury point' : 'Step 1 — Tap the area that hurts'}
           </div>
           <div style={{ fontSize: 14, fontWeight: 700, color: '#0F1923' }}>
             {zoomed
