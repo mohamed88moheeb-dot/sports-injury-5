@@ -419,7 +419,7 @@ function Assessment({ assessment, setAssessment, toggleArray, generateProfile })
             <input type="number" min="0" value={assessment.daysSince} onChange={(e) => setAssessment({ ...assessment, daysSince: Number(e.target.value) })} />
           </Field>
         </div>
-        <MuscleSelector assessment={assessment} setAssessment={setAssessment} />
+        <AnatomySelector assessment={assessment} setAssessment={setAssessment} />
         <MultiSelect title="Secondary areas" items={injuryRegions.filter((r) => r.id !== assessment.primaryRegion).map((r) => r.name)} selected={assessment.secondaryRegions} onToggle={(v) => toggleArray('secondaryRegions', v)} />
         <MultiSelect title="What are you feeling?" items={symptomTypes} selected={assessment.symptoms} onToggle={(v) => toggleArray('symptoms', v)} />
       </div>
