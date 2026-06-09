@@ -570,7 +570,17 @@ function PlanView({ profile, completeDay, setActiveTab }) {
                                       );
                                     })}
                                   </div>
-                                  {day.exercises.length === 0 && <div className="rest-visual"><BodyPictogram type="assessment" /><p>Complete rest today. Recovery is the training stimulus.</p></div>}
+                                  {day.exercises.length === 0 && (
+                                    <div className="rest-visual">
+                                      <div className="mini-anatomy-preview">
+                                        <InteractiveAnatomy
+                                          assessment={assessment}
+                                          setAssessment={setAssessment}
+                                        />
+                                      </div>
+                                      <p>Complete rest today. Recovery is the training stimulus.</p>
+                                    </div>
+                                  )}
                                   <div className="day-rule"><strong>Progress rule:</strong> {day.rule}</div>
                                 </div>
                               )}
