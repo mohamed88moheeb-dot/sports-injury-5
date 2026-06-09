@@ -538,11 +538,14 @@ export default function AnatomySelector({ assessment, setAssessment }) {
 
   return (
     <div style={{
-      background: '#FFFFFF',
-      border: '1px solid #E2E8F0',
-      borderRadius: 16,
-      padding: 20,
-      marginTop: 16,
+      background: 'linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%)',
+      border: '1px solid rgba(15, 25, 35, 0.08)',
+      borderRadius: 28,
+      padding: 28,
+      marginTop: 22,
+      boxShadow: '0 24px 60px rgba(15, 25, 35, 0.08)',
+      position: 'relative',
+      overflow: 'hidden',
     }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
         <div>
