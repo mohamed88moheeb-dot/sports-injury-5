@@ -254,10 +254,7 @@ export default function Page() {
           </div>
         </div>
         <div className="hero-panel glass-card">
-          <InteractiveAnatomy
-            assessment={assessment}
-            setAssessment={setAssessment}
-          />    
+          <HumanFrontIcon size="medium" />
           <div>
             <span className="small-label">Current assessment focus</span>
             <strong>{regionLabels[assessment.primaryRegion]}</strong>
@@ -322,10 +319,7 @@ function Dashboard({ profile, stats, setActiveTab, saving, saveMessage, assessme
   if (!profile) {
     return (
       <section className="empty-state app-section app-section-light">
-        <InteractiveAnatomy
-          assessment={assessment}
-          setAssessment={setAssessment}
-        />
+        <HumanFrontIcon size="medium" />
         <span className="section-index">Start</span>
         <h2>Start with the assessment.</h2>
         <p>Your dashboard will show your injury, grade, expected return range, today’s plan, and saved progress after the app builds your recovery profile.</p>
