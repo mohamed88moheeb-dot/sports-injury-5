@@ -401,11 +401,7 @@ function Assessment({ assessment, setAssessment, toggleArray, generateProfile })
         <p className="eyebrow">Step 1</p>
         <h3>Injury profile</h3>
         <div className="form-grid">
-          <Field label="Main area">
-            <select value={assessment.primaryRegion} onChange={(e) => setAssessment({ ...assessment, primaryRegion: e.target.value, exactArea: '' })}>
-              {injuryRegions.map((r) => <option key={r.id} value={r.id}>{r.name}</option>)}
-            </select>
-          </Field>
+      
           <Field label="Estimated grade">
             <select value={assessment.grade} onChange={(e) => setAssessment({ ...assessment, grade: e.target.value })}>
               {grades.map((g) => <option key={g.id} value={g.id}>{g.name}</option>)}
