@@ -217,7 +217,7 @@ export default function Page() {
           <HumanFrontIcon size="medium" />
           <div>
             <p className="eyebrow">Personal recovery system</p>
-            <h1>Injury Recovery</h1>
+            <h1>Injury Guide</h1>
           </div>
         </div>
         <div className="top-actions">
@@ -244,7 +244,10 @@ export default function Page() {
       <section className="hero-card app-section app-section-hero">
         <div className="hero-copy-wrap">
           <span className="section-index">Overview</span>
-          <p className="eyebrow">Evidence-driven beta</p>
+          <p className="eyebrow stacked-eyebrow">
+            <span>Overview</span>
+            <span>Evidence Driven</span>
+          </p>
           <h2>Build a plan around the injury you actually have.</h2>
           <p className="hero-copy">A calm recovery workspace for assessment, day-by-day rehab, progress tracking, check-ins, and return-to-sport decisions.</p>
           <div className="hero-points">
@@ -298,7 +301,10 @@ function AuthCard({ authMode, setAuthMode, authForm, setAuthForm, handleAuth, au
     <section className="auth-card app-section app-section-soft">
       <div>
         <span className="section-index">Account</span>
-        <p className="eyebrow">Secure progress</p>
+        <p className="eyebrow stacked-eyebrow">
+          <span>Account</span>
+          <span>Secure Progress</span>
+        </p>
         <h3>{authMode === 'signin' ? 'Sign in to continue' : 'Create a tester account'}</h3>
         <p>Use an account to save your assessment, plan progress, and check-ins across devices.</p>
       </div>
