@@ -274,7 +274,16 @@ export default function InteractiveAnatomy({ onSelectRegion }) {
             <path d="M21.17,52.91c-.17.3-.23.63-.49.82.86-2.68,1.85-5.2,3.01-7.71.41-.89.64-1.79.86-2.73l.23-1c.06-.26.39-.48.63-.36.28,1.6-.49,3.57-1.36,4.94-.46.72-.86,1.42-1.21,2.21l-1.68,3.83Z" fill="#444"/>
           </g>
         </g>
-        <g id="calves">
+        <g
+          id="calves"
+          className={`anatomy-region ${selectedRegion === "calves" ? "selected" : ""}`}
+          onClick={() => handleSelect("calves")}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") handleSelect("calves");
+          }}
+        >
           <g id="back_calf_left">
             <g id="back_calf_left-2" data-name="back_calf_left">
               <g>
