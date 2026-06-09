@@ -336,7 +336,6 @@ function Dashboard({ profile, stats, setActiveTab, saving, saveMessage, assessme
     <section className="dashboard-grid app-section app-section-light">
       <div className="section-heading span-4">
         <div>
-          <span className="section-index">Home</span>
           <p className="eyebrow">Recovery dashboard</p>
           <h2>{profile.regionName}</h2>
           <p>{profile.gradeName} · {profile.mechanism} · {profile.exactAreaName || 'General area'}</p>
