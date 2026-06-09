@@ -111,7 +111,16 @@ export default function InteractiveAnatomy({ onSelectRegion }) {
             <path d="M104.68,31.18c-.76,1.39-2.83,1.58-4.2.65,1.87-.4,3.59-1.34,4.42-3.01.03-.06.23-.17.24-.08.11.83-.05,1.69-.46,2.44Z" fill="#40413f"/>
           </g>
         </g>
-        <g id="back_glutes">
+        <g
+          id="back_glutes"
+          className={`anatomy-region ${selectedRegion === "back_glutes" ? "selected" : ""}`}
+          onClick={() => handleSelect("back_glutes")}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") handleSelect("back_glutes");
+          }}
+        >
           <g>
             <g>
               <path d="M98.42,61.52c-.53.15-1.05.11-1.52-.05-.56-.19-.87-.68-.84-1.28s.02-1.21-.14-1.83c-.26-1.02-.43-2.04-.52-3.09-.06-.66-.03-1.29.05-1.94.11-.92.46-1.75,1.08-2.45.18-.2.33-.53.61-.61.33-.09.7.04,1.04.15,1.71.56,3.29,1.47,4.63,2.67,2.27,2.03.17,6.1-2,7.73l-2.38.7Z" fill="#030303"/>
