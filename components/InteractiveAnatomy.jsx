@@ -26,15 +26,15 @@ export default function InteractiveAnatomy({ onSelectRegion }) {
           </g>
         </g>
         <g
-        id="back_lower_back"
-        className={`anatomy-region ${selectedRegion === "back_lower_back" ? "selected" : ""}`}
-        onClick={() => handleSelect("back_lower_back")}
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") handleSelect("back_lower_back");
-        }}
-      >
+          id="back_lower_back"
+          className={`anatomy-region ${selectedRegion === "back_lower_back" ? "selected" : ""}`}
+          onClick={() => handleSelect("back_lower_back")}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") handleSelect("back_lower_back");
+          }}
+        >
           <g>
             <path d="M99.84,46.39c.23.65.53,1.62.11,1.89l-3.63,2.31c-.12.08-.29-.23-.28-.33-.2-1.04-.22-2.03-.28-3.09l.17-5.75.4-2.84s.06-.08.08-.09c.04-.02.12,0,.15.07l.93,1.92,1.62,3.91.72,2.03Z" fill="#030303"/>
             <path d="M99.8,48.1l-3.51,2.23c-.38-2.36-.4-4.7-.24-7.07.1-1.45.17-2.83.46-4.28l1.77,3.9,1.44,3.81c.14.36.2.72.24,1.1.01.12-.03.24-.15.32Z" fill="#444543"/>
