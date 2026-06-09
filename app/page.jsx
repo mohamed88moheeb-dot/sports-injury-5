@@ -217,7 +217,7 @@ export default function Page() {
           <HumanFrontIcon size="medium" />
           <div>
             <p className="eyebrow full-line">Personal Recovery System</p>
-            <p className="hero-title full-line">Injury Guide</p>
+            <h3 className="hero-title full-line">Injury Guide</h3>
           </div>
         </div>
         <div className="top-actions">
@@ -245,7 +245,6 @@ export default function Page() {
         <div className="hero-copy-wrap">
           <span className="section-index">Overview</span>
           <p className="eyebrow stacked-eyebrow">
-            <span>Overview</span>
             <span>Evidence Driven</span>
           </p>
           <h2>Build a plan around the injury you actually have.</h2>
@@ -302,7 +301,6 @@ function AuthCard({ authMode, setAuthMode, authForm, setAuthForm, handleAuth, au
       <div>
         <span className="section-index">Account</span>
         <p className="eyebrow stacked-eyebrow">
-          <span>Account</span>
           <span>Secure Progress</span>
         </p>
         <h3>{authMode === 'signin' ? 'Sign in to continue' : 'Create a tester account'}</h3>
@@ -326,7 +324,6 @@ function Dashboard({ profile, stats, setActiveTab, saving, saveMessage, assessme
     return (
       <section className="empty-state app-section app-section-light">
         <HumanFrontIcon size="medium" />
-        <span className="section-index">Start</span>
         <h2>Start with the assessment.</h2>
         <p>Your dashboard will show your injury, grade, expected return range, today’s plan, and saved progress after the app builds your recovery profile.</p>
         <button className="primary-btn" onClick={() => setActiveTab('assessment')}>Open assessment</button>
