@@ -19,7 +19,7 @@ import {
 } from '../data/rehabKnowledge';
 
 const emptyAssessment = {
-  primaryRegion: 'hamstring',
+  primaryRegion: '',
   exactArea: '',
   secondaryRegions: [],
   grade: 'grade1',
