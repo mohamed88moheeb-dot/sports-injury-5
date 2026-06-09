@@ -403,8 +403,7 @@ function Assessment({ assessment, setAssessment, toggleArray, generateProfile })
     <section className="assessment-grid app-section app-section-soft">
       <div className="section-heading span-2">
         <div>
-          <span className="section-index">Assessment</span>
-          <p className="eyebrow">Build your recovery profile</p>
+          <p className="eyebrow">Build your profile</p>
           <h2>Tell us what happened.</h2>
           <p>The plan adapts to location, grade, mechanism, sport demands, equipment, pain, and warning signs.</p>
         </div>
@@ -490,7 +489,6 @@ function PlanView({ profile, completeDay, setActiveTab }) {
     <section className="plan-shell app-section app-section-light">
       <div className="plan-intro section-heading">
         <div>
-          <span className="section-index">Plan</span>
           <p className="eyebrow">Phase by phase</p>
           <h2>{profile.regionName}</h2>
           <p>{profile.planNote}</p>
