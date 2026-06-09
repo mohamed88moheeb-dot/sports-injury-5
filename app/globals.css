@@ -6,59 +6,62 @@
    ───────────────────────────────────────────── */
 
 :root {
-  /* Core palette */
-  --ink:        #0F1923;
-  --ink-2:      #1E2D3D;
-  --ink-3:      #2C3E50;
-  --muted:      #6B7C8F;
-  --faint:      #9AABB8;
-  --bg:         #F5F4F0;
-  --bg-2:       #EDECEA;
-  --bg-3:       #E4E3DF;
-  --surface:    #FFFFFF;
-  --line:       rgba(15, 25, 35, 0.08);
-  --line-med:   rgba(15, 25, 35, 0.12);
-  --line-strong:rgba(15, 25, 35, 0.18);
+  --ink: #0B1220;
+  --ink-2: #172033;
+  --ink-3: #2B3548;
 
-  /* Brand accent — performance green */
-  --green:      #00C896;
-  --green-dark: #009E78;
-  --green-dim:  rgba(0, 200, 150, 0.12);
-  --green-glow: rgba(0, 200, 150, 0.22);
+  --muted: #64748B;
+  --faint: #94A3B8;
 
-  /* Phase colours — each phase has an identity */
-  --phase-protect: #4A90D9;
-  --phase-restore: #00C896;
-  --phase-capacity:#8B5CF6;
-  --phase-speed:   #F59E0B;
-  --phase-return:  #0F1923;
+  --bg: #F6F8FB;
+  --bg-2: #EEF3F8;
+  --bg-3: #E3EAF2;
 
-  /* Semantic */
-  --amber:      #F59E0B;
-  --amber-dim:  rgba(245, 158, 11, 0.12);
-  --red:        #EF4444;
-  --red-dim:    rgba(239, 68, 68, 0.10);
-  --blue:       #4A90D9;
-  --blue-dim:   rgba(74, 144, 217, 0.12);
+  --surface: #FFFFFF;
+  --surface-soft: #F8FAFC;
 
-  /* Type */
+  --line: rgba(15, 23, 42, 0.08);
+  --line-med: rgba(15, 23, 42, 0.12);
+  --line-strong: rgba(15, 23, 42, 0.18);
+
+  --green: #10B981;
+  --green-dark: #059669;
+  --green-dim: rgba(16, 185, 129, 0.12);
+  --green-glow: rgba(16, 185, 129, 0.26);
+
+  --blue: #2563EB;
+  --blue-dim: rgba(37, 99, 235, 0.12);
+
+  --purple: #7C3AED;
+  --purple-dim: rgba(124, 58, 237, 0.12);
+
+  --amber: #F59E0B;
+  --amber-dim: rgba(245, 158, 11, 0.12);
+
+  --red: #EF4444;
+  --red-dim: rgba(239, 68, 68, 0.10);
+
+  --phase-protect: #2563EB;
+  --phase-restore: #10B981;
+  --phase-capacity: #7C3AED;
+  --phase-speed: #F59E0B;
+  --phase-return: #0B1220;
+
   --font: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, "Segoe UI", sans-serif;
   --font-mono: ui-monospace, "SF Mono", "Fira Code", monospace;
 
-  /* Radii */
-  --r-xs:  6px;
-  --r-sm:  10px;
-  --r-md:  16px;
-  --r-lg:  22px;
-  --r-xl:  30px;
-  --r-pill:999px;
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 24px;
+  --r-xl: 34px;
+  --r-pill: 999px;
 
-  /* Shadows */
-  --shadow-xs:  0 1px 3px rgba(15,25,35,.06), 0 1px 2px rgba(15,25,35,.04);
-  --shadow-sm:  0 4px 12px rgba(15,25,35,.07), 0 2px 4px rgba(15,25,35,.04);
-  --shadow-md:  0 8px 24px rgba(15,25,35,.09), 0 3px 8px rgba(15,25,35,.05);
-  --shadow-lg:  0 20px 48px rgba(15,25,35,.10), 0 8px 16px rgba(15,25,35,.06);
-  --shadow-green: 0 8px 24px rgba(0,200,150,.28);
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-sm: 0 8px 20px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 18px 40px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 28px 80px rgba(15, 23, 42, 0.12);
+  --shadow-green: 0 12px 34px rgba(16, 185, 129, 0.28);
 }
 
 /* ── Reset ─────────────────────────────────── */
