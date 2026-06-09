@@ -1324,3 +1324,20 @@ input[type='range']::-moz-range-thumb {
   width: 120px;  /* adjust as needed */
   height: auto;
 }
+.stacked-eyebrow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  line-height: 1.05;
+}
+
+.stacked-eyebrow span:first-child {
+  color: #64748b;
+  letter-spacing: 0.14em;
+}
+
+.stacked-eyebrow span:last-child {
+  color: #00a36c;
+  letter-spacing: 0.14em;
+}
