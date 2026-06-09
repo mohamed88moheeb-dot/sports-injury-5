@@ -214,7 +214,7 @@ export default function Page() {
 
       <header className="topbar glass-panel">
         <div className="brand-lockup">
-          <InteractiveAnatomy assessment={assessment} setAssessment={setAssessment} />
+          <HumanFrontIcon size="medium" />
           <div>
             <p className="eyebrow">Personal recovery system</p>
             <h1>Injury Recovery</h1>
