@@ -1,5 +1,6 @@
-import AnatomySelector from '@/components/AnatomySelector';
 'use client';
+
+import AnatomySelector from '@/components/AnatomySelector';
 
 import { useEffect, useMemo, useState } from 'react';
 import { supabase, hasSupabase } from '../lib/supabaseClient';
