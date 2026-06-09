@@ -1347,3 +1347,61 @@ input[type='range']::-moz-range-thumb {
   white-space: nowrap;
   line-height: 1.2;
 }
+
+/* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+@media (max-width: 768px) {
+  .app-shell {
+    padding: 14px;
+    gap: 14px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .brand-lockup {
+    gap: 10px;
+    align-items: center;
+  }
+
+  .brand-lockup .human-front-icon {
+    height: 72px;
+    width: auto;
+  }
+
+  .brand-lockup h1 {
+    font-size: 1.45rem;
+    line-height: 1.05;
+    margin: 0;
+  }
+
+  .brand-lockup .eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 4px;
+  }
+
+  .top-actions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .account-pill {
+    max-width: 100%;
+    font-size: 0.72rem;
+    padding: 8px 10px;
+  }
+
+  .glass-panel,
+  .glass-card,
+  .section-card,
+  .app-section {
+    border-radius: 22px;
+  }
+}
