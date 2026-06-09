@@ -1,6 +1,7 @@
 'use client';
 
 import InteractiveAnatomy from '../components/InteractiveAnatomy';
+import HumanFrontIcon from '../components/HumanFrontIcon';
 
 import { useEffect, useMemo, useState } from 'react';
 import { supabase, hasSupabase } from '../lib/supabaseClient';
