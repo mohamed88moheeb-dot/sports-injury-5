@@ -1311,3 +1311,16 @@ input[type='range']::-moz-range-thumb {
 .human-front-large {
   height: 350px; /* header/banner */
 }
+/* for the standard human front icons */
+.human-front-icon {
+  max-width: 80px;   /* or whatever fits the card */
+  max-height: 80px;
+  width: auto;
+  height: auto;
+}
+
+/* for the interactive anatomy in smaller cards like the signed-in card */
+.mini-anatomy-preview svg {
+  width: 120px;  /* adjust as needed */
+  height: auto;
+}
