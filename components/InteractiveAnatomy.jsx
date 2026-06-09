@@ -352,7 +352,16 @@ export default function InteractiveAnatomy({ onSelectRegion }) {
             <path d="M52.63,38.83c-.76.08-1.5-.35-1.77-1.07-.54-.86-.82-1.79-1.05-2.77-.19-.8-.22-1.61.17-2.35.5-.96,1.66.76,2,1.75.26.55.41,1.1.49,1.7l.16,2.74Z" fill="#444443"/>
           </g>
         </g>
-        <g id="front_quads">
+      <g
+        id="front_quads"
+        className={`anatomy-region ${selectedRegion === "front_quads" ? "selected" : ""}`}
+        onClick={() => handleSelect("front_quads")}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") handleSelect("front_quads");
+        }}
+       >
           <g id="front_quadriceps_left">
             <path d="M43.85,73.97c-.34-.52-.5-1.09-.62-1.68-.34-1.82-.39-3.63-.36-5.48.03-1.54.18-2.98.54-4.47l1.26-4.45,1.32-4.1.13-.55c.5,1.06.92,2.06,1.18,3.17.37,1.59.52,3.19.25,4.81l-1.13,4.84-.46,1.84-1.23,4.4c-.23.57-.41,1.12-.87,1.67Z" fill="#444442"/>
             <g>
