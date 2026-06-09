@@ -1,9 +1,9 @@
-export default function HumanFrontIcon({ className = '' }) {
+export default function HumanFrontIcon({ className = '', size = 'medium' }) {
   return (
     <img
       src="/human_front.svg"
       alt="Human body front view"
-      className={className}
+      className={`human-front-icon human-front-${size} ${className}`}
     />
   );
 }
