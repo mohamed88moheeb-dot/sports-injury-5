@@ -1294,3 +1294,20 @@ input[type='range']::-moz-range-thumb {
   width: 120px; /* adjust as needed */
   height: auto;
 }
+.human-front-icon {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.human-front-small {
+  height: 80px; /* plan/rest cards */
+}
+
+.human-front-medium {
+  height: 250px; /* hero section / larger card */
+}
+
+.human-front-large {
+  height: 350px; /* header/banner */
+}
