@@ -656,7 +656,10 @@ function MuscleSelector({ assessment, setAssessment }) {
   return (
     <div className="muscle-selector glass-card inset">
       <div className="muscle-map-panel">
-        <BodyPictogram type={assessment.primaryRegion} selectedArea={assessment.exactArea} detailed />
+        <InteractiveAnatomy
+          assessment={assessment}
+          setAssessment={setAssessment}
+        />
       </div>
       <div className="muscle-select-content">
         <span className="field-label">Where exactly do you feel it?</span>
