@@ -436,7 +436,7 @@ function Assessment({ assessment, setAssessment, toggleArray, generateProfile })
       <div className="section-card span-2 glass-card soft-tint">
         <p className="eyebrow">Step 2</p>
         <h3>Sport, demands, and equipment</h3>
-        <MSelect title="What sports do you play?" items={sports} selected={assessment.sports} onToggle={(v) => toggleArray('sports', v)} />
+        <Select title="What sports do you play?" items={sports} selected={assessment.sports} onToggle={(v) => toggleArray('sports', v)} />
         <Select title="What does your sport demand?" items={movements} selected={assessment.movements} onToggle={(v) => toggleArray('movements', v)} />
         <Select title="What equipment do you have access to?" items={equipmentOptions} selected={assessment.equipment} onToggle={(v) => toggleArray('equipment', v)} />
       </div>
