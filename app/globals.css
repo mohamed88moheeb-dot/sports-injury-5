@@ -1235,3 +1235,44 @@ input[type='range']::-moz-range-thumb {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* Interactive Anatomy SVG */
+
+.interactive-anatomy-wrapper {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interactive-anatomy-wrapper svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.anatomy-region {
+  cursor: pointer;
+  outline: none;
+}
+
+.anatomy-region path {
+  transition: fill 0.18s ease, opacity 0.18s ease, filter 0.18s ease;
+}
+
+.anatomy-region:hover path {
+  fill: #38bdf8 !important;
+  opacity: 0.9;
+}
+
+.anatomy-region.selected path {
+  fill: #22c55e !important;
+  opacity: 1;
+}
+
+.anatomy-region:focus-visible path {
+  fill: #60a5fa !important;
+  outline: none;
+}
