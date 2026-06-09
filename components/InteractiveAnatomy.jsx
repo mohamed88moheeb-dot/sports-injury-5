@@ -203,7 +203,16 @@ export default function InteractiveAnatomy({ onSelectRegion }) {
           </g>
         </g>
         <path d="M45.02,72.15c-.25.88-1.04,2.53-1.45,1.81-.31-.54-.47-1.11-.57-1.73-.3-1.76-.36-3.48-.32-5.27.04-1.65.18-3.21.56-4.82s.88-3.23,1.4-4.86l1.18-3.7c.1-.3.05-.61.3-.89l.83,1.73c.39.82.53,1.7.71,2.59.28,1.41.34,2.8.11,4.22l-.57,2.73-1.22,4.87-.95,3.31Z" fill="#030303"/>
-        <g id="front_soleus">
+        <g
+          id="front_soleus"
+          className={`anatomy-region ${selectedRegion === "front_soleus" ? "selected" : ""}`}
+          onClick={() => handleSelect("front_soleus")}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") handleSelect("front_soleus");
+          }}
+        >
           <g id="front_soleus_left">
             <g>
               <path d="M44.08,95.05c-.03.08-.11.11-.14.11-.05,0-.11-.06-.13-.14-.33-1.36.2-5.84.52-7.57l1.17-6.48.42-2.94.18-.94c.02-.08.07-.12.12-.12.06,0,.12.04.13.12l.19,2.11c.18,2.05.13,4.04-.13,6.09l-.54,4.33c-.41,1.87-1.07,3.64-1.8,5.42Z" fill="#040404"/>
