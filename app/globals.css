@@ -1405,3 +1405,62 @@ input[type='range']::-moz-range-thumb {
     border-radius: 22px;
   }
 }
+
+/* =========================
+   MOBILE DASHBOARD OPTIMIZATION
+   ========================= */
+@media (max-width: 768px) {
+  .dashboard-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* space between cards */
+    padding: 12px;
+  }
+
+  .dashboard-card,
+  .section-card,
+  .glass-card {
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+    gap: 10px;
+    border-radius: 20px;
+  }
+
+  .card-header h2,
+  .card-header h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
+  }
+
+  .card-header .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+
+  .card-content p {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .progress-pill,
+  .stat-pill {
+    font-size: 0.68rem;
+    padding: 6px 10px;
+    min-width: 60px;
+  }
+
+  .mini-anatomy-preview svg {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+  }
+
+  /* Ensure any icons scale down */
+  .human-front-icon {
+    width: 70px;
+    height: auto;
+  }
+}
