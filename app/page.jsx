@@ -429,16 +429,80 @@ function Assessment({ assessment, setAssessment, toggleArray, generateProfile })
           </Field>
         </div>
         <InteractiveAnatomy assessment={assessment} setAssessment={setAssessment} />  
-        <select title="Secondary areas" items={injuryRegions.filter((r) => r.id !== assessment.primaryRegion).map((r) => r.name)} selected={assessment.secondaryRegions} onToggle={(v) => toggleArray('secondaryRegions', v)} />
-        <select title="What are you feeling?" items={symptomTypes} selected={assessment.symptoms} onToggle={(v) => toggleArray('symptoms', v)} />
+        <Field label="Secondary areas">
+          <select
+            value={assessment.secondaryRegions}
+            onChange={(e) => setAssessment({ ...assessment, secondaryRegions: e.target.value })}
+          >
+            {injuryRegions
+              .filter((r) => r.id !== assessment.primaryRegion)
+              .map((r) => (
+                <option key={r.id} value={r.name}>
+                  {r.name}
+                </option>
+              ))}
+          </select>
+        </Field>        
+        <Field label="What are you feeling?">
+          <select
+            value={assessment.symptoms[0] || ''}
+            onChange={(e) =>
+              setAssessment({
+                ...assessment,
+                symptoms: e.target.value ? [e.target.value] : [],
+              })
+            }
+          >
+            <option value="">Select symptom</option>
+            {symptomTypes.map((symptom) => (
+              <option key={symptom} value={symptom}>
+                {symptom}
+              </option>
+            ))}
+          </select>
+        </Field>      
       </div>
 
       <div className="section-card span-2 glass-card soft-tint">
         <p className="eyebrow">Step 2</p>
         <h3>Sport, demands, and equipment</h3>
-        <select title="What sports do you play?" items={sports} selected={assessment.sports} onToggle={(v) => toggleArray('sports', v)} />
-        <select title="What does your sport demand?" items={movements} selected={assessment.movements} onToggle={(v) => toggleArray('movements', v)} />
-        <select title="What equipment do you have access to?" items={equipmentOptions} selected={assessment.equipment} onToggle={(v) => toggleArray('equipment', v)} />
+        <Field label="What does your sport demand?">
+          <select
+            value={assessment.movements[0] || ''}
+            onChange={(e) =>
+              setAssessment({
+                ...assessment,
+                movements: e.target.value ? [e.target.value] : [],
+              })
+            }
+          >
+            <option value="">Select movement demand</option>
+            {movements.map((m) => (
+              <option key={m} value={m}>
+                {m}
+              </option>
+            ))}
+          </select>
+        </Field>
+        
+        <Field label="What equipment do you have access to?">
+          <select
+            value={assessment.equipment[0] || ''}
+            onChange={(e) =>
+              setAssessment({
+                ...assessment,
+                equipment: e.target.value ? [e.target.value] : [],
+              })
+            }
+          >
+            <option value="">Select equipment</option>
+            {equipmentOptions.map((item) => (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            ))}
+          </select>
+        </Field>
       </div>
 
       <div className="section-card span-2 glass-card">
