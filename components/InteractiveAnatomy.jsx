@@ -481,7 +481,16 @@ export default function InteractiveAnatomy({ onSelectRegion }) {
             </g>
           </g>
         </g>
-        <g id="front_adductors">
+        <g
+          id="front_adductors"
+          className={`anatomy-region ${selectedRegion === "front_adductors" ? "selected" : ""}`}
+          onClick={() => handleSelect("front_adductors")}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") handleSelect("front_adductors");
+          }}
+        >
           <g id="front_adductor_left">
             <g id="front_adductor_left-2" data-name="front_adductor_left">
               <g>
