@@ -429,16 +429,16 @@ function Assessment({ assessment, setAssessment, toggleArray, generateProfile })
           </Field>
         </div>
         <InteractiveAnatomy assessment={assessment} setAssessment={setAssessment} />  
-        <MultiSelect title="Secondary areas" items={injuryRegions.filter((r) => r.id !== assessment.primaryRegion).map((r) => r.name)} selected={assessment.secondaryRegions} onToggle={(v) => toggleArray('secondaryRegions', v)} />
-        <MultiSelect title="What are you feeling?" items={symptomTypes} selected={assessment.symptoms} onToggle={(v) => toggleArray('symptoms', v)} />
+        <Select title="Secondary areas" items={injuryRegions.filter((r) => r.id !== assessment.primaryRegion).map((r) => r.name)} selected={assessment.secondaryRegions} onToggle={(v) => toggleArray('secondaryRegions', v)} />
+        <Select title="What are you feeling?" items={symptomTypes} selected={assessment.symptoms} onToggle={(v) => toggleArray('symptoms', v)} />
       </div>
 
       <div className="section-card span-2 glass-card soft-tint">
         <p className="eyebrow">Step 2</p>
         <h3>Sport, demands, and equipment</h3>
-        <MultiSelect title="What sports do you play?" items={sports} selected={assessment.sports} onToggle={(v) => toggleArray('sports', v)} />
-        <MultiSelect title="What does your sport demand?" items={movements} selected={assessment.movements} onToggle={(v) => toggleArray('movements', v)} />
-        <MultiSelect title="What equipment do you have access to?" items={equipmentOptions} selected={assessment.equipment} onToggle={(v) => toggleArray('equipment', v)} />
+        <MSelect title="What sports do you play?" items={sports} selected={assessment.sports} onToggle={(v) => toggleArray('sports', v)} />
+        <Select title="What does your sport demand?" items={movements} selected={assessment.movements} onToggle={(v) => toggleArray('movements', v)} />
+        <Select title="What equipment do you have access to?" items={equipmentOptions} selected={assessment.equipment} onToggle={(v) => toggleArray('equipment', v)} />
       </div>
 
       <div className="section-card span-2 glass-card">
