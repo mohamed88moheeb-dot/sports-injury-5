@@ -216,8 +216,8 @@ export default function Page() {
         <div className="brand-lockup">
           <HumanFrontIcon size="medium" />
           <div>
-            <p className="eyebrow">Personal recovery system</p>
-            <h1>Injury Guide</h1>
+            <p className="eyebrow full-line">Personal Recovery System</p>
+            <p className="hero-title full-line">Injury Guide</p>
           </div>
         </div>
         <div className="top-actions">
