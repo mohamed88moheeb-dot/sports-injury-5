@@ -338,10 +338,7 @@ function Dashboard({ profile, stats, setActiveTab, saving, saveMessage, assessme
           <h2>{profile.regionName}</h2>
           <p>{profile.gradeName} · {profile.mechanism} · {profile.exactAreaName || 'General area'}</p>
         </div>
-        <InteractiveAnatomy
-          assessment={assessment}
-          setAssessment={setAssessment}
-        />
+        <HumanFrontIcon size="medium" />
       </div>
 
       <div className="metric-card accent-blue">
@@ -497,10 +494,7 @@ function PlanView({ profile, completeDay, setActiveTab }) {
           <p>{profile.planNote}</p>
         </div>
         <div className="mini-anatomy-preview">
-          <InteractiveAnatomy
-            assessment={assessment}
-            setAssessment={setAssessment}
-          />
+          <HumanFrontIcon size="small" />
         </div>
       </div>
       {profile.plan.map((phase, pIndex) => (
@@ -578,10 +572,7 @@ function PlanView({ profile, completeDay, setActiveTab }) {
                                   {day.exercises.length === 0 && (
                                     <div className="rest-visual">
                                       <div className="mini-anatomy-preview">
-                                        <InteractiveAnatomy
-                                          assessment={assessment}
-                                          setAssessment={setAssessment}
-                                        />
+                                          <HumanFrontIcon size="small" />
                                       </div>
                                       <p>Complete rest today. Recovery is the training stimulus.</p>
                                     </div>
