@@ -213,7 +213,7 @@ export default function Page() {
 
       <header className="topbar glass-panel">
         <div className="brand-lockup">
-          <BodyPictogram type="logo" compact />
+          <InteractiveAnatomy assessment={assessment} setAssessment={setAssessment} />
           <div>
             <p className="eyebrow">Personal recovery system</p>
             <h1>Injury Recovery</h1>
@@ -253,7 +253,10 @@ export default function Page() {
           </div>
         </div>
         <div className="hero-panel glass-card">
-          <BodyPictogram type={assessment.primaryRegion} />
+          <InteractiveAnatomy
+            assessment={assessment}
+            setAssessment={setAssessment}
+          />    
           <div>
             <span className="small-label">Current assessment focus</span>
             <strong>{regionLabels[assessment.primaryRegion]}</strong>
@@ -308,7 +311,10 @@ function Dashboard({ profile, stats, setActiveTab, saving, saveMessage }) {
   if (!profile) {
     return (
       <section className="empty-state app-section app-section-light">
-        <BodyPictogram type="assessment" />
+        <InteractiveAnatomy
+          assessment={assessment}
+          setAssessment={setAssessment}
+        />
         <span className="section-index">Start</span>
         <h2>Start with the assessment.</h2>
         <p>Your dashboard will show your injury, grade, expected return range, today’s plan, and saved progress after the app builds your recovery profile.</p>
@@ -327,7 +333,10 @@ function Dashboard({ profile, stats, setActiveTab, saving, saveMessage }) {
           <h2>{profile.regionName}</h2>
           <p>{profile.gradeName} · {profile.mechanism} · {profile.exactAreaName || 'General area'}</p>
         </div>
-        <BodyPictogram type={profile.primaryRegion} />
+        <InteractiveAnatomy
+          assessment={assessment}
+          setAssessment={setAssessment}
+        />
       </div>
 
       <div className="metric-card accent-blue">
@@ -482,7 +491,12 @@ function PlanView({ profile, completeDay, setActiveTab }) {
           <h2>{profile.regionName}</h2>
           <p>{profile.planNote}</p>
         </div>
-        <BodyPictogram type={profile.primaryRegion} compact />
+        <div className="mini-anatomy-preview">
+          <InteractiveAnatomy
+            assessment={assessment}
+            setAssessment={setAssessment}
+          />
+        </div>
       </div>
       {profile.plan.map((phase, pIndex) => (
         <article className={`phase-card ${phase.accent}`} key={phase.id}>
