@@ -133,7 +133,16 @@ export default function InteractiveAnatomy({ onSelectRegion }) {
             </g>
           </g>
         </g>
-        <g id="back_hamstrings">
+        <g
+      id="back_hamstrings"
+      className={`anatomy-region ${selectedRegion === "back_hamstrings" ? "selected" : ""}`}
+      onClick={() => handleSelect("back_hamstrings")}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") handleSelect("back_hamstrings");
+      }}
+    >
           <g id="back_hamstring_right">
             <g id="back_hamstring_right-2" data-name="back_hamstring_right">
               <g>
