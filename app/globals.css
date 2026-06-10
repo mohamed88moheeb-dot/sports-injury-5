@@ -1464,3 +1464,69 @@ input[type='range']::-moz-range-thumb {
     height: auto;
   }
 }
+/* =========================
+   ANATOMY SELECTOR STABILITY
+   ========================= */
+
+.interactive-anatomy-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  min-height: 360px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interactive-anatomy-wrapper svg {
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+.selected-anatomy-region {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  color: #0f172a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+  z-index: 5;
+  min-width: 118px;
+  text-align: left;
+}
+
+.selected-anatomy-region::first-letter {
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .interactive-anatomy-wrapper {
+    max-width: 100%;
+    min-height: 330px;
+  }
+
+  .interactive-anatomy-wrapper svg {
+    max-width: 300px;
+  }
+
+  .selected-anatomy-region {
+    right: 8px;
+    top: 52%;
+    padding: 10px 14px;
+    font-size: 0.68rem;
+    min-width: 96px;
+  }
+}
