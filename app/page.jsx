@@ -255,7 +255,14 @@ export default function Page() {
             <span>Daily sessions</span>
           </div>
         </div>
-            <span className="small-label">Current assessment focus</span>
+            <div className="hero-panel glass-card">
+              <HumanFrontIcon size="medium" />
+              <div>
+                <span className="small-label">Current assessment focus</span>
+                <strong>{regionLabels[assessment.primaryRegion]}</strong>
+                <span>{gradeLabels[assessment.grade]}</span>
+              </div>
+            </div>
             <strong>{regionLabels[assessment.primaryRegion]}</strong>
             <span>{gradeLabels[assessment.grade]}</span>
           </div>
