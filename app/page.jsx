@@ -259,7 +259,6 @@ export default function Page() {
         </div>
       
         <div className="hero-panel glass-card">
-          <HumanFrontIcon size="medium" />
           <div>
             <span className="small-label">Current assessment focus</span>
             <strong>{regionLabels[assessment.primaryRegion]}</strong>
