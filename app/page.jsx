@@ -241,31 +241,41 @@ export default function Page() {
         />
       )}
 
-       <section className="hero-card app-section app-section-hero">
-        <div className="hero-copy-wrap">
-          <span className="section-index">Overview</span>
-          <p className="eyebrow stacked-eyebrow">
-            <span>Evidence Driven</span>
-          </p>
-          <h2>Build a plan around the injury you actually have.</h2>
-          <p className="hero-copy">
-            A calm recovery workspace for assessment, day-by-day rehab, progress tracking, check-ins, and return-to-sport decisions.
-          </p>
-          <div className="hero-points">
-            <span>Criteria-based progression</span>
-            <span>Saved progress</span>
-            <span>Daily sessions</span>
-          </div>
-        </div>
-      
-        <div className="hero-panel glass-card">
-          <div>
-            <span className="small-label">Current assessment focus</span>
-            <strong>{regionLabels[assessment.primaryRegion]}</strong>
-            <span>{gradeLabels[assessment.grade]}</span>
-          </div>
-        </div>
-      </section>
+      {!profile ? (
+              <section className="hero-card app-section app-section-hero">
+                <div className="hero-copy-wrap">
+                  <span className="section-index">Overview</span>
+                  <p className="eyebrow stacked-eyebrow">
+                    <span>Evidence Driven</span>
+                  </p>
+                  <h2>Build a plan around the injury you actually have.</h2>
+                  <p className="hero-copy">
+                    A calm recovery workspace for assessment, day-by-day rehab, progress tracking, check-ins, and return-to-sport decisions.
+                  </p>
+                  <div className="hero-points">
+                    <span>Criteria-based progression</span>
+                    <span>Saved progress</span>
+                    <span>Daily sessions</span>
+                  </div>
+                </div>
+                <div className="hero-panel glass-card">
+                  <div>
+                    <span className="small-label">Current assessment focus</span>
+                    <strong>{regionLabels[assessment.primaryRegion] || 'Not set'}</strong>
+                    <span>{gradeLabels[assessment.grade]}</span>
+                  </div>
+                </div>
+              </section>
+            ) : (
+              <section className="status-strip">
+                <HumanFrontIcon size="small" />
+                <div>
+                  <p className="eyebrow">{profile.regionName} · {profile.gradeName}</p>
+                  <strong>{profile.today?.title || 'Plan ready'}</strong>
+                </div>
+                <span className="status-strip-chip">{dashboardStats?.percent ?? 0}% complete</span>
+              </section>
+            )}
 
       <nav className="tabs glass-panel" aria-label="Main navigation">
         {['dashboard', 'assessment', 'plan', 'checkin', 'coach'].map((tab) => (
