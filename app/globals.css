@@ -1530,3 +1530,24 @@ input[type='range']::-moz-range-thumb {
     min-width: 96px;
   }
 }
+
+/* ── Mobile bottom nav ──────────────────────── */
+@media (max-width: 768px) {
+  .tabs {
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    width: calc(100% - 24px);
+    max-width: 480px;
+    justify-content: space-between;
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(16px);
+    z-index: 50;
+    box-shadow: var(--shadow-lg);
+  }
+  .tab { flex-direction: column; gap: 4px; padding: 8px 6px; flex: 1; }
+  .tab span { font-size: 10px; }
+  .tab-space { padding-bottom: 84px; } /* clear space for fixed bar */
+}
