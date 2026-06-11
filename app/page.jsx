@@ -268,7 +268,6 @@ export default function Page() {
               </section>
             ) : (
               <section className="status-strip">
-                <HumanFrontIcon size="small" />
                 <div>
                   <p className="eyebrow">{profile.regionName} · {profile.gradeName}</p>
                   <strong>{profile.today?.title || 'Plan ready'}</strong>
@@ -335,7 +334,6 @@ function Dashboard({ profile, stats, setActiveTab, saving, saveMessage, assessme
   if (!profile) {
     return (
       <section className="empty-state app-section app-section-light">
-        <HumanFrontIcon size="medium" />
         <h2>Start with the assessment.</h2>
         <p>Your dashboard will show your injury, grade, expected return range, today’s plan, and saved progress after the app builds your recovery profile.</p>
         <button className="primary-btn" onClick={() => setActiveTab('assessment')}>Open assessment</button>
