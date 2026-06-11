@@ -1552,38 +1552,27 @@ input[type='range']::-moz-range-thumb {
   .tab-space { padding-bottom: 84px; } /* clear space for fixed bar */
 }
 
-{!profile ? (
-        <section className="hero-card app-section app-section-hero">
-          <div className="hero-copy-wrap">
-            <span className="section-index">Overview</span>
-            <p className="eyebrow stacked-eyebrow">
-              <span>Evidence Driven</span>
-            </p>
-            <h2>Build a plan around the injury you actually have.</h2>
-            <p className="hero-copy">
-              A calm recovery workspace for assessment, day-by-day rehab, progress tracking, check-ins, and return-to-sport decisions.
-            </p>
-            <div className="hero-points">
-              <span>Criteria-based progression</span>
-              <span>Saved progress</span>
-              <span>Daily sessions</span>
-            </div>
-          </div>
-          <div className="hero-panel glass-card">
-            <div>
-              <span className="small-label">Current assessment focus</span>
-              <strong>{regionLabels[assessment.primaryRegion] || 'Not set'}</strong>
-              <span>{gradeLabels[assessment.grade]}</span>
-            </div>
-          </div>
-        </section>
-      ) : (
-        <section className="status-strip">
-          <HumanFrontIcon size="small" />
-          <div>
-            <p className="eyebrow">{profile.regionName} · {profile.gradeName}</p>
-            <strong>{profile.today?.title || 'Plan ready'}</strong>
-          </div>
-          <span className="status-strip-chip">{dashboardStats?.percent ?? 0}% complete</span>
-        </section>
-      )}
+/* ── Status strip (returning users) ─────────── */
+.status-strip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  margin: 16px 0;
+  box-shadow: var(--shadow-xs);
+}
+.status-strip .human-front-icon { flex: 0 0 auto; }
+.status-strip > div { flex: 1; min-width: 0; }
+.status-strip strong { display: block; font-size: 15px; margin-top: 2px; }
+.status-strip-chip {
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  background: var(--green-dim);
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
